@@ -17,10 +17,7 @@ Write the C Program using Linux IO Systems locking
 Execute the C Program for the desired output. 
 
 # PROGRAM:
-
-## 1.To Write a C program that illustrates files copying 
-```c
-#include <unistd.h>
+```
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <stdlib.h>
@@ -70,18 +67,7 @@ int main(int argc, char *argv[]) {
     return EXIT_SUCCESS;
 }
 ```
-
-## OUTPUT 
-![sem](./img7/1.png)
-
-
-
-
-
-
-## 2.To Write a C program that illustrates files locking
-
-```c
+```
 #include <fcntl.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -137,7 +123,7 @@ int main(int argc, char *argv[]) {
     // Release lock
     if (flock(fd, LOCK_UN) == -1) {
         perror("Error unlocking");
-           close(fd);
+        close(fd);
         exit(EXIT_FAILURE);
     }
     printf("Unlocked\n");
@@ -146,14 +132,16 @@ int main(int argc, char *argv[]) {
     close(fd);
     return 0;
 }
-
 ```
 
 
 
-## OUTPUT
 
-![sem](./img7/Screenshot%20at%202026-05-27%2010-52-11.png)
+## OUTPUT
+<img width="766" height="421" alt="Screenshot 2026-05-26 210203" src="https://github.com/user-attachments/assets/b7b9365a-5e38-4408-b6b3-1ea075fa47a0" />
+<img width="795" height="478" alt="Screenshot 2026-05-26 210526" src="https://github.com/user-attachments/assets/0bdd901c-ba09-4237-bc59-3771d346ce81" />
+<img width="808" height="524" alt="Screenshot 2026-05-26 210533" src="https://github.com/user-attachments/assets/761863b8-87ad-47c5-8dfb-e1ca136680e6" />
+<img width="791" height="463" alt="Screenshot 2026-05-26 210540" src="https://github.com/user-attachments/assets/4400a870-7374-4bc2-9c87-a938e40f9b64" />
 
 
 
